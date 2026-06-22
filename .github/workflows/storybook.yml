@@ -1,0 +1,41 @@
+name: Storybook
+
+# Build the design-system Storybook and publish it to GitHub Pages on every
+# push to main — the canonical human-facing reference for the design system.
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: storybook-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: corepack enable
+      - run: yarn install --immutable
+      # Storybook's preview.css imports @wardnet/ui/styles.css (dist/ui.css), so
+      # ui must be built first. Only ui is needed (it doesn't import the styles
+      # tokens; brand SVGs are served from source), so build just that.
+      - run: yarn workspace @wardnet/ui build
+      - run: yarn workspace @wardnet/ui build-storybook
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: packages/ui/storybook-static
+      - id: deployment
+        uses: actions/deploy-pages@v4
