@@ -7,6 +7,10 @@ export interface SegmentedTab {
   label: ReactNode;
   /** Optional count badge rendered after the label. */
   count?: number;
+  /** Optional `data-testid` for this tab's button, so consumers can
+   *  target a specific tab in e2e specs without relying on its label
+   *  text. Kept off the component's own contract — the consumer owns it. */
+  testId?: string;
 }
 
 interface SegmentedTabsProps {
@@ -37,6 +41,7 @@ export function SegmentedTabs({
           role="tab"
           aria-selected={t.id === activeId}
           data-state={t.id === activeId ? "active" : "inactive"}
+          data-testid={t.testId}
           onClick={() => onChange(t.id)}
         >
           {t.label}
