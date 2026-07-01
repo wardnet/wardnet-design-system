@@ -40,7 +40,8 @@
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "cmdk": "1.1.1",
-    "radix-ui": "1.5.0"
+    "radix-ui": "1.5.0",
+    "sonner": "2.0.7"
   },
   "peerDependencies": {
     "lucide-react": ">=1.0.0",

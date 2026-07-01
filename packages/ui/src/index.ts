@@ -40,8 +40,16 @@ export {
   CardContent,
   CardFooter,
 } from "./primitives/card";
+export { CodeInput } from "./primitives/code-input";
+export type { CodeInputProps } from "./primitives/code-input";
 export { Combobox, ComboboxItem } from "./primitives/combobox";
 export type { ComboboxProps, ComboboxItemProps } from "./primitives/combobox";
+export { Divider } from "./primitives/divider";
+export type { DividerProps } from "./primitives/divider";
+export { Meter } from "./primitives/meter";
+export type { MeterProps, MeterTone } from "./primitives/meter";
+export { TextLink } from "./primitives/text-link";
+export type { TextLinkProps } from "./primitives/text-link";
 export {
   Drawer,
   DrawerTrigger,
@@ -144,5 +152,11 @@ export type { ToggleProps } from "./primitives/toggle";
 // Brand + generic compositions
 export { Logo } from "./components/Logo";
 export { FormActions } from "./components/FormActions";
+export { OAuthButton } from "./components/OAuthButton";
+export type { OAuthButtonProps, OAuthProvider } from "./components/OAuthButton";
 export { SegmentedTabs } from "./components/SegmentedTabs";
 export type { SegmentedTab } from "./components/SegmentedTabs";
+export { ThemeToggle } from "./components/ThemeToggle";
+export type { ThemeToggleProps } from "./components/ThemeToggle";
+export { Toaster, toast } from "./components/Toaster";
+export type { ToasterProps } from "./components/Toaster";
