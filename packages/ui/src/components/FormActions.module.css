@@ -7,3 +7,16 @@
   justify-content: flex-end;
   gap: 0.5rem;
 }
+
+/* Layout when a left-pinned tertiary (destructive) action is present: it sits
+   at the left edge, opposite the right-aligned secondary/primary group. */
+.spread {
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/* The right-aligned secondary + primary cluster in the space-between layout. */
+.group {
+  display: flex;
+  gap: 0.5rem;
+}
