@@ -14,6 +14,7 @@ const external = [
   "clsx",
   "class-variance-authority",
   "cmdk",
+  /^sonner($|\/)/,
   /^@wardnet\/styles($|\/)/,
 ];
 

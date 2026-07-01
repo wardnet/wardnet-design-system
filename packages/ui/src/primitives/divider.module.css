@@ -1,0 +1,22 @@
+.rule {
+  height: 1px;
+  background: var(--line);
+  border: 0;
+}
+.labeled {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0;
+}
+.line {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.label {
+  font-size: var(--text-2xs);
+  font-weight: 500;
+  color: var(--ink-3);
+  letter-spacing: 0.08em;
+}
