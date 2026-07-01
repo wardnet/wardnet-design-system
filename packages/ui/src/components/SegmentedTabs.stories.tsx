@@ -45,3 +45,22 @@ export const WithCounts: Story = {
     );
   },
 };
+
+// Each tab can carry an optional `testId`, forwarded as `data-testid`
+// so e2e specs can target a specific tab without relying on label text.
+export const WithTestIds: Story = {
+  render: () => {
+    const [active, setActive] = React.useState("all");
+    return (
+      <SegmentedTabs
+        activeId={active}
+        onChange={setActive}
+        tabs={[
+          { id: "all", label: "All", testId: "group-all" },
+          { id: "wired", label: "Wired", testId: "group-wired" },
+          { id: "wifi", label: "Wi-Fi", testId: "group-wifi" },
+        ]}
+      />
+    );
+  },
+};
