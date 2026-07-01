@@ -1,6 +1,6 @@
 {
   "name": "@wardnet/ui",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Wardnet design system — domain-agnostic React primitives and brand components, documented in Storybook",
   "license": "MIT",
   "type": "module",
