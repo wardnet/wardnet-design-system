@@ -1,13 +1,21 @@
 .boxes {
   display: flex;
-  gap: 8px;
+  gap: clamp(4px, 2vw, 8px);
+  width: 100%;
+  /* Boxes cap at 46px, so on a wide container the slack is split either side
+     rather than pushing the row left. */
+  justify-content: center;
 }
 .box {
-  width: 46px;
+  /* Fluid: 46px is the ceiling, but the row must never outgrow its container —
+     6 boxes at a fixed 46px overflow a phone-width auth card. */
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 46px;
   height: 54px;
   text-align: center;
   font-family: var(--font-mono);
-  font-size: 22px;
+  font-size: clamp(18px, 5vw, 22px);
   font-weight: 600;
   color: var(--ink);
   background: var(--bg-card);
