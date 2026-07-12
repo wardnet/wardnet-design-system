@@ -1,5 +1,11 @@
 # @wardnet/ui
 
+## 0.3.1
+
+### Patch Changes
+
+- CodeInput: stop the boxes overflowing their container on narrow viewports. Six boxes at a fixed 46px (plus 8px gaps) needed 316px, which overhung a phone-width auth card's 299px content box by 8.5px on each side. The boxes are now fluid with 46px as a ceiling rather than a fixed size, and the gap and font size scale with the viewport — so they shrink to fit a narrow card while desktop rendering is unchanged.
+
 ## 0.3.0
 
 ### Minor Changes
