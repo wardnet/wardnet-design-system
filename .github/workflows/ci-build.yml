@@ -1,0 +1,29 @@
+# ci-build — this file is yours.
+#
+# gt created it once and will never modify or delete it again. It is called by
+# ci-orchestration.yml and must keep `workflow_call`.
+#
+# There is no ci-test stage: this repository has no test suite, and building
+# plus type-checking is the whole gate today. Adding `test` to
+# pipeline.ci.stages in .gt-repo.yaml is what scaffolds one.
+name: ci-build
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: corepack enable
+      - run: yarn install --immutable
+      - run: yarn build
+      - run: yarn type-check

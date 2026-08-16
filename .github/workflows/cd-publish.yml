@@ -1,26 +1,21 @@
-name: Release
+# cd-publish — this file is yours.
+#
+# gt created it once and will never modify or delete it again. It is called by
+# cd-orchestration.yml, which verifies the tagged tree carries a passing
+# gt/validated-tree attestation before this runs.
+#
+# release.yml's serialisation moved to the orchestrator, which groups delivery
+# per repository rather than per ref — for the reason release.yml documented:
+# a release pushes one tag per package, and the first run's `changeset publish`
+# ships every pending version, so per-ref runs would race and 409.
+name: cd-publish
 
-# Human-gated: merging never publishes. Publishing runs only when a release tag
-# is pushed (the `@wardnet/*@*` tags `yarn changeset tag` creates after the
-# release PR merges). NOTE: `changeset publish` then ships EVERY package whose
-# bumped version isn't on the registry yet — so a release pushes all pending
-# bumps, not only the package named in the tag that fired this run.
 on:
-  push:
-    tags:
-      - "@wardnet/*@*"
+  workflow_call:
 
 permissions:
   contents: read
   packages: write
-
-# Pushing the per-package tags for one release fires this workflow once per tag.
-# Serialize them: the first run's `changeset publish` ships every pending
-# version, and the queued runs then find nothing left to publish and no-op —
-# instead of racing to publish the same version and 409-ing each other.
-concurrency:
-  group: release-publish
-  cancel-in-progress: false
 
 jobs:
   publish:
