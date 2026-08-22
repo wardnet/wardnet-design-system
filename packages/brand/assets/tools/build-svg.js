@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// biome-ignore-all lint/correctness/noNodejsModules: node build tooling, run by hand and by the build — it never ships to a browser, which is the rule's concern.
+// biome-ignore-all lint/correctness/noProcessGlobal: same — this is a CLI script; argv and exit codes are how it talks to its caller.
 /**
  * outline-svg.js
  *

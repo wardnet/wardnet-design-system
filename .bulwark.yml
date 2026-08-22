@@ -1,20 +1,20 @@
 # .bulwark.yml — this file is yours.
 #
-# gt created it once and will never modify or delete it again. bulwark owns
-# what goes in it; gt only makes sure it exists, because the one setting below
-# is load-bearing for the pipeline and silently wrong by default.
+# gt scaffolded it and will never modify or delete it again; bulwark owns what
+# goes in it.
 #
-# `coverage.source` says who produces the coverage bulwark gates on. In this
-# pipeline ci-test produces it and uploads it as the `gt-coverage` artifact,
-# which the bulwark stage extracts before bulwark runs — so `report` is
-# correct. Leaving it unset means `run`, and bulwark would execute your suite a
-# second time without saying so.
-#
-# A stage skipped by ci-preflight simply produces no report, which bulwark
-# treats as no coverage for that ecosystem rather than an error.
+# There is no `coverage` block: the coverage gate is off for this repository
+# (bulwark.coverage in .gt-repo.yaml) because there is no test suite to measure,
+# so declaring where coverage comes from would be answering a question nobody
+# asks. Add one in the same change that adds tests.
 #
 # Everything else bulwark supports — per-language enablement, coverage
 # tolerances, patch-coverage opt-outs, toolchain overrides — belongs here too.
 # See bulwark's README.
-coverage:
-  source: report
+typescript:
+  # Biome rather than the default ESLint + eslint-plugin-security. That plugin's
+  # detect-object-injection fires on every `obj[key]`, and .bulwark.yml has no
+  # rule-level exclusion, so the only way to quiet it is a suppression at each
+  # site. Biome's security + correctness sets carry their weight instead. This
+  # matches the choice made across the governed repos.
+  linter: biome

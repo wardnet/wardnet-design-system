@@ -1,3 +1,4 @@
+// biome-ignore-all lint/correctness/noNodejsModules: a Vite config is Node-side build configuration; it is never part of the bundle.
 import { resolve } from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
