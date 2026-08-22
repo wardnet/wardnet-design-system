@@ -34,7 +34,7 @@ jobs:
       - run: yarn workspace @wardnet/ui build
       - run: yarn workspace @wardnet/ui build-storybook
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: packages/ui/storybook-static
       - id: deployment
