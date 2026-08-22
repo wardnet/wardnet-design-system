@@ -32,6 +32,7 @@
 .card:has(.head) [data-slot="card-content"] {
   padding: 0 var(--pad) var(--pad);
 }
+/* biome-ignore lint/correctness/noUnknownPseudoClass: :global is CSS Modules syntax, valid in a .module.css file; Biome's rule only models standard pseudo-classes. */
 .card:has(.head) [data-slot="card-content"]:has(> :global(.logs)) {
   padding: 0;
 }

@@ -1,0 +1,31 @@
+# ci-build — this file is yours.
+#
+# gt created it once and will never modify or delete it again. It is called by
+# ci-orchestration.yml and must keep `workflow_call`, or the orchestrator loses
+# the stage.
+#
+# This is ci.yml's `build` job, unchanged: turbo builds every workspace and then
+# type-checks them. It is the whole of this repository's CI — there is no test
+# suite here, which is why preflight and build are the only stages.
+name: ci-build
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 24
+      # Yarn 4 ships via corepack; packageManager in package.json pins the version.
+      - run: corepack enable
+      - run: yarn install --immutable
+      - run: yarn build
+      - run: yarn type-check
