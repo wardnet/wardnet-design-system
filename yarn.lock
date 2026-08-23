@@ -743,10 +743,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource-variable/inter-tight@npm:^5.2.7":
-  version: 5.2.7
-  resolution: "@fontsource-variable/inter-tight@npm:5.2.7"
-  checksum: 10c0/ca93e2088c8fce926966180a2fc6ef94f62105043a4f5efba05a8402e566ae83a53401efd6ac53d765467a7ced6072f4e57a3f99e086c11eeae551e586cacbd5
+"@fontsource-variable/inter-tight@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource-variable/inter-tight@npm:5.3.0"
+  checksum: 10c0/36eb21a67e3ca6a4f8eb1afc0298cbe3066048542951b2455a387912aff445fb473e525626d0c3c14ba8869627b5ae28efe6c24bacb4799dc800c9b0ce6e03e8
   languageName: node
   linkType: hard
 
@@ -3761,7 +3761,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@wardnet/styles@workspace:packages/styles"
   dependencies:
-    "@fontsource-variable/inter-tight": "npm:^5.2.7"
+    "@fontsource-variable/inter-tight": "npm:^5.3.0"
     "@fontsource-variable/jetbrains-mono": "npm:^5.3.0"
     prettier: "npm:3.8.4"
     typescript: "npm:6.0.3"
