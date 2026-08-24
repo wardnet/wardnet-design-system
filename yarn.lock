@@ -3700,7 +3700,7 @@ __metadata:
   dependencies:
     "@fontsource-variable/inter-tight": "npm:^5.3.0"
     "@fontsource-variable/jetbrains-mono": "npm:^5.3.0"
-    prettier: "npm:3.8.4"
+    prettier: "npm:3.9.6"
     typescript: "npm:6.0.3"
   languageName: unknown
   linkType: soft
@@ -3722,7 +3722,7 @@ __metadata:
     clsx: "npm:2.1.1"
     cmdk: "npm:1.1.1"
     lucide-react: "npm:1.31.0"
-    prettier: "npm:3.8.4"
+    prettier: "npm:3.9.6"
     radix-ui: "npm:1.6.7"
     react: "npm:19.2.7"
     react-dom: "npm:19.2.7"
@@ -5497,12 +5497,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.8.4":
-  version: 3.8.4
-  resolution: "prettier@npm:3.8.4"
+"prettier@npm:3.9.6":
+  version: 3.9.6
+  resolution: "prettier@npm:3.9.6"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/b90a0cbe75b88ac0af9c13fe0f359bd19926fabccd88483227b21f71f0c1cc42da056fc1ac3a361e665577c568371d5ccfb2c62c31c8a1186f8d1bd531a063e9
+  checksum: 10c0/9f7ddae234035868f3daab3dc34e6de7e54622185afb017378029f0c09a9c023248ccf6f34def0b17a0538e18c47aa1b3188bab72965d1bf735919baa0747e99
   languageName: node
   linkType: hard
 
@@ -6476,7 +6476,7 @@ __metadata:
   resolution: "wardnet-design-system@workspace:."
   dependencies:
     "@changesets/cli": "npm:2.27.11"
-    prettier: "npm:3.8.4"
+    prettier: "npm:3.9.6"
     turbo: "npm:2.10.10"
     typescript: "npm:6.0.3"
   languageName: unknown
