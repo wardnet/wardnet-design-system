@@ -17,7 +17,7 @@
     "release": "yarn workspaces foreach --all --no-private --topological npm publish --tolerate-republish"
   },
   "devDependencies": {
-    "@changesets/cli": "2.27.11",
+    "@changesets/cli": "3.0.0",
     "prettier": "3.9.6",
     "turbo": "2.10.10",
     "typescript": "6.0.3"
