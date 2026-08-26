@@ -33,7 +33,7 @@ jobs:
       # tokens; brand SVGs are served from source), so build just that.
       - run: yarn workspace @wardnet/ui build
       - run: yarn workspace @wardnet/ui build-storybook
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v3
         with:
           path: packages/ui/storybook-static
