@@ -3021,24 +3021,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-docs@npm:10.5.8":
-  version: 10.5.8
-  resolution: "@storybook/addon-docs@npm:10.5.8"
+"@storybook/addon-docs@npm:10.6.1":
+  version: 10.6.1
+  resolution: "@storybook/addon-docs@npm:10.6.1"
   dependencies:
     "@mdx-js/react": "npm:^3.0.0"
-    "@storybook/csf-plugin": "npm:10.5.8"
     "@storybook/icons": "npm:^2.0.2"
-    "@storybook/react-dom-shim": "npm:10.5.8"
+    "@storybook/react-dom-shim": "npm:10.6.1"
     react: "npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
     react-dom: "npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
     ts-dedent: "npm:^2.0.0"
+    unplugin: "npm:^2.3.5"
   peerDependencies:
     "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.5.8
+    storybook: ^10.6.1
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10c0/5cb2d7520bcefaefe0dab899f450cfc3d2c95bba4f5ae96f10cd8fc11fcdc7283a7184c804d308424c7686285a8b555d0e77d2392624afaae48ee3d9ff1de3c8
+  checksum: 10c0/d88ea18f06e3a0c4065e81829d22266e0f513e9426497e371c2c80a64d1c9d33b8fa28f561629838939828a17a090a33574be2dae7e48689d5c0c92a4cfc3b44
   languageName: node
   linkType: hard
 
@@ -3143,6 +3143,24 @@ __metadata:
     "@types/react-dom":
       optional: true
   checksum: 10c0/9f39797d905046a9e58c276824c8c0e5d6ed06b977799fe6f9ae82601dbb621ce59b953ce63e123253736a1852e2ca29d14167f5070fb03ae0c37bbf2a84503f
+  languageName: node
+  linkType: hard
+
+"@storybook/react-dom-shim@npm:10.6.1":
+  version: 10.6.1
+  resolution: "@storybook/react-dom-shim@npm:10.6.1"
+  peerDependencies:
+    "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    "@types/react-dom": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    storybook: ^10.6.1
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    "@types/react-dom":
+      optional: true
+  checksum: 10c0/37c5109962fa7ada74d14e4377a1c5405b31557c49b4832e1a9ac233952d42be8ead39a60af94d5904825c73b70d05652a62cf5a79a44e2c607de26054cdc895
   languageName: node
   linkType: hard
 
@@ -3732,7 +3750,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@wardnet/ui@workspace:packages/ui"
   dependencies:
-    "@storybook/addon-docs": "npm:10.5.8"
+    "@storybook/addon-docs": "npm:10.6.1"
     "@storybook/addon-mcp": "npm:0.6.0"
     "@storybook/react-vite": "npm:10.5.8"
     "@tailwindcss/vite": "npm:4.3.3"
